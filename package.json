@@ -1,0 +1,36 @@
+{
+  "name": "@skyux/scripts",
+  "version": "1.0.0-beta.0",
+  "description": "Scripts for modifying and maintaining SKY UX libraries",
+  "main": "index.js",
+  "bin": {
+    "skyux-scripts": "bin/skyux-scripts.js"
+  },
+  "scripts": {
+    "coverage": "nyc jasmine --config=jasmine.json",
+    "eslint": "eslint index.js lib test",
+    "lint": "npm run eslint",
+    "test": "npm run lint && npm run coverage",
+    "format-all": "npx prettier --write ."
+  },
+  "author": "Blackbaud, Inc.",
+  "license": "MIT",
+  "dependencies": {
+    "@blackbaud/skyux-logger": "1.1.3",
+    "comment-json": "4.1.1",
+    "cross-spawn": "7.0.3",
+    "fs-extra": "10.0.0",
+    "glob": "7.2.0",
+    "latest-version": "5.1.0",
+    "lodash.merge": "4.6.2",
+    "prettier": "2.3.1"
+  },
+  "devDependencies": {
+    "eslint": "7.28.0",
+    "eslint-config-prettier": "8.3.0",
+    "jasmine": "3.6.4",
+    "mock-require": "3.0.3",
+    "nyc": "15.1.0",
+    "proxyquire": "2.1.3"
+  }
+}
